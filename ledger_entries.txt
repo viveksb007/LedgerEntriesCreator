@@ -1,0 +1,8 @@
+2024/03/05 buy
+    Assets:Checking:HDFC 	 -24999 INR
+    Assets:Equity:MF:MIRAE_LM 	 171.636 MIRAE_LM @ 145.65 INR
+
+2024/03/05 buy
+    Assets:Checking:HDFC 	 -39998 INR
+    Assets:Equity:MF:NAVI_US 	 3060.431 NAVI_US @ 13.0694 INR
+
