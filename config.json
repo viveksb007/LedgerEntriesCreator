@@ -4,5 +4,11 @@
   "INF879O01027": "Assets:Equity:MF:PPFAS",
   "INF959L01FP2": "Assets:Equity:MF:NAVI_NIFTY",
   "INF846K01K35": "Assets:Equity:MF:AXIS_SC",
-  "INF879O01068": "Assets:Equity:MF:PPLF"
+  "INF879O01068": "Assets:Equity:MF:PPLF",
+  "922908363": "Assets:Equity:VOO",
+  "922908736": "Assets:Equity:VUG",
+  "02079K305": "Assets:Equity:GOOGL",
+  "594918104": "Assets:Equity:MSFT",
+  "037833100": "Assets:Equity:AAPL",
+  "30303M102": "Assets:Equity:META"
 }

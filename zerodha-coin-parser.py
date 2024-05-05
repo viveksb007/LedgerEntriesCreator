@@ -80,7 +80,7 @@ def create_ledger_entries():
     with open('config.json', 'r') as file:
         mf_mapping_data = json.load(file)
 
-    entries_file = open("ledger_entries.txt", "w")
+    entries_file = open("output/zerodha-coin-ledger_entries.txt", "w")
 
     records = Transformer.parse(csv_file_path)
     for record in records:

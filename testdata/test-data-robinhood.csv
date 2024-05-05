@@ -1,0 +1,14 @@
+"Activity Date","Process Date","Settle Date","Instrument","Description","Trans Code","Quantity","Price","Amount"
+"5/2/2024","5/2/2024","5/3/2024","","ACH Deposit","ACH","","","$1,800.00"
+"4/29/2024","4/29/2024","5/1/2024","VOO","Vanguard S&P 500 ETF
+CUSIP: 922908363
+Recurring","Buy","1","$469.14","($50.00)"
+"4/29/2024","4/29/2024","5/1/2024","VUG","Vanguard Growth ETF
+CUSIP: 922908736
+Recurring","Buy","1.1","$336.36","($50.00)"
+"4/29/2024","4/29/2024","5/1/2024","GOOGL","Alphabet Class A
+CUSIP: 02079K305
+Recurring","Buy","0.5","$166.98","($50.00)"
+"4/29/2024","4/29/2024","5/1/2024","MSFT","Microsoft
+CUSIP: 594918104
+Recurring","Buy","0.0","$401.06","($50.00)"
