@@ -22,7 +22,7 @@ class LedgerEntry:
         self.date = date
         self.title = title
         self.quantity = float(quantity)
-        self.price = float(price[1:])
+        self.price = float(price[1:].replace(',', ''))
         self.credit_account = credit_account
         self.debit_account = debit_account
         self.currency = currency
@@ -32,9 +32,10 @@ class LedgerEntry:
 
     def __str__(self):
         if self.trade_type == 'Buy':
-            debit_str = f'{self.debit_account} \t -{self.debit_amount} {self.currency}'
             credit_str = f'{self.credit_account} \t {self.quantity} {self.credit_account_ticker} @ {self.price} {self.currency}'
-            return f'{self.date} {self.title}\n    {debit_str}\n    {credit_str}'
+            debit_str = f'{self.debit_account} \t -{self.debit_amount} {self.currency}'
+            # debit_str = 'Income:Salary:Genesis'
+            return f'{self.date} {self.title}\n    {credit_str}\n    {debit_str}'
         elif self.trade_type == 'Sell':
             debit_str = f'{self.debit_account} \t {self.debit_amount} {self.currency}'
             credit_str = f'{self.credit_account} \t -{self.quantity} {self.credit_account_ticker} @ {self.price} {self.currency}'
@@ -52,6 +53,8 @@ class Transformer:
             header = next(reader)  # Skip the header row
             for row in reader:
                 # print(row)
+                if len(row) != 9:
+                    continue
                 activity_date, process_date, settle_date, instrument, description, trans_code, quantity, price, amount = row
                 activity_date = datetime.strptime(activity_date, '%m/%d/%Y').strftime('%Y/%m/%d')
                 transaction = Transaction(activity_date, process_date, settle_date, instrument, description, trans_code,
@@ -66,6 +69,7 @@ def create_ledger_entries():
         mf_mapping_data = json.load(file)
     entries_file = open("output/robinhood-ledger_entries.txt", "w")
     csv_file_path = "testdata/test-data-robinhood.csv"
+    # csv_file_path = "realdata/rhood-2025.csv"
     transactions = Transformer.parse(csv_file_path)
     for transaction in transactions:
         if transaction.trans_code not in ["Buy", "Sell"]:

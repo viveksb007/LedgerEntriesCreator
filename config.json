@@ -5,10 +5,16 @@
   "INF959L01FP2": "Assets:Equity:MF:NAVI_NIFTY",
   "INF846K01K35": "Assets:Equity:MF:AXIS_SC",
   "INF879O01068": "Assets:Equity:MF:PPLF",
+  "INF205K01NJ9": "Assets:Equity:MF:INVESCO_GOLD",
   "922908363": "Assets:Equity:VOO",
   "922908736": "Assets:Equity:VUG",
   "02079K305": "Assets:Equity:GOOGL",
   "594918104": "Assets:Equity:MSFT",
   "037833100": "Assets:Equity:AAPL",
-  "30303M102": "Assets:Equity:META"
+  "30303M102": "Assets:Equity:META",
+  "084670702": "Assets:Equity:BRK_B",
+  "22160K105": "Assets:Equity:COST",
+  "37954Y715": "Assets:Equity:BOTZ",
+  "921946406": "Assets:Equity:VYM",
+  "023135106": "Assets:Equity:AMZN"
 }

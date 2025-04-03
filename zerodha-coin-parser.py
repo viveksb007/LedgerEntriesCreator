@@ -36,9 +36,10 @@ class LedgerEntry:
 
     def __str__(self):
         if self.trade_type == 'buy':
-            debit_str = f'{self.debit_account} \t -{self.debit_amount} {self.currency}'
             credit_str = f'{self.credit_account} \t {self.quantity} {self.credit_account_ticker} @ {self.price} {self.currency}'
-            return f'{self.date} {self.title}\n    {debit_str}\n    {credit_str}'
+            debit_str = f'{self.debit_account} \t -{self.debit_amount} {self.currency}'
+            # debit_str = 'Income:Salary:Genesis'
+            return f'{self.date} {self.title}\n    {credit_str}\n    {debit_str}'
         elif self.trade_type == 'sell':
             debit_str = f'{self.debit_account} \t {self.debit_amount} {self.currency}'
             credit_str = f'{self.credit_account} \t -{self.quantity} {self.credit_account_ticker} @ {self.price} {self.currency}'
@@ -76,6 +77,7 @@ class Transformer:
 
 def create_ledger_entries():
     csv_file_path = 'testdata/test-data-zerodha-coin.csv'
+    # csv_file_path = 'realdata/tradebook-YA8055-MF-2025.csv'
 
     with open('config.json', 'r') as file:
         mf_mapping_data = json.load(file)
